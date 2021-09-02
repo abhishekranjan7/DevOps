@@ -1,0 +1,92 @@
+Docker Code
+systemctl start docker
+docker images //it will give us all the docker images which is present in our local machine. 
+docker pull ubuntu // pull ubuntu images
+
+//to run a container(Light Weight Virtual Machine) 
+docker run -it ubuntu
+
+//============How to create image from docker file video time 56:29 ====
+//Our Docker file 
+gedit Dockerfile
+
+//create docker file to docker images, give pass word. 
+sudo docker build /Downloads/
+
+//run your docker images.
+docker run .it [image id]
+
+================Git and Github====
+git add -A // add all local file to staging area.
+git status //It tells us what need to be commit.
+git commit -a -m "adding all 3 files together//It will commit all the files.
+git log//It will show all the commit.
+
+====How to create branches====
+git branche firstbranch//copy of master branch.
+git checkout firstbranch//Switch to master branch to newly created branch
+git add edu4.txt //staging area. 
+git commit -m "making changes in firstbranch" //this changes in firstbranch not in master branch. 
+======Mergin===
+//What is mergin ? It's a way to combine the work of branches together.
+git merge firstbranch    //Merge firstbranch to master branch.Note checkout in master branch
+git checkout firstbranch //
+git commit -a am "modifying edu4"//changes in firstbranch
+git checkout master//back to master branch. 
+
+
+====Rebasing===
+git checkout firstbranch
+//add new files to firstbranch
+git add -A
+//I am going to commit
+git commit -a -m "Adding for rebasing"
+//go back tothe master
+git checkout master
+
+//Rebasing
+git checkout firstbranch //First go to new branch
+
+git rebase master //All master branch file come into the newly created branch. 
+
+
+==========How to use git push=====
+ssh-keygen //for generating the public keygen and use this keygen to your github account. 
+ssh -T git@github.com
+git checkout firstbranch           //This branch will contain only my your work. 
+git push origin firstbranch //It has changed and push in new branch
+git checkout master
+git push origin master //pushed all the files to github from local repository. 
+
+===New file and revert back to original file==
+git add revert.txt
+git commit -m "revert"
+git commit -a -m "revert2"
+
+I want to go back previous version
+copy the ssh code 
+
+git checkout [hexadecimal code]
+git checkout 802d31b4 revert.txt	
+cat revert.txt //This is our previous file. 
+
+
+
+//At video Location 2:27:06 Jenkins Start.
+
+	   
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
